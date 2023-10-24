@@ -7,8 +7,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
 
+/* Picker view */
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerViewElementos;
+
+/* Image view */
+@property (weak, nonatomic) IBOutlet UIImageView *imageViewProductos;
 
 @end
 

@@ -1,24 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9lW-ov-UEj">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqN-fi-UdE">
+                                        <rect key="frame" x="8" y="135" width="398" height="162"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="162" id="6IS-ig-tWk"/>
+                                        </constraints>
+                                    </pickerView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tK1-Ce-2eD">
+                                        <rect key="frame" x="87" y="367" width="240" height="240"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elige tu producto:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bzc-lh-ZuY">
+                                        <rect key="frame" x="8" y="53" width="398" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="hVA-Ji-oia"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Bzc-lh-ZuY" firstAttribute="centerX" secondItem="9lW-ov-UEj" secondAttribute="centerX" id="7Ch-xu-9cn"/>
+                                    <constraint firstAttribute="width" constant="414" id="BIM-Ig-mA0"/>
+                                    <constraint firstItem="Bzc-lh-ZuY" firstAttribute="leading" secondItem="hqN-fi-UdE" secondAttribute="leading" id="C84-hR-Vne"/>
+                                    <constraint firstItem="1YI-IM-QOU" firstAttribute="bottom" secondItem="tK1-Ce-2eD" secondAttribute="bottom" constant="207" id="E5P-9B-hsx"/>
+                                    <constraint firstItem="Bzc-lh-ZuY" firstAttribute="leading" secondItem="9lW-ov-UEj" secondAttribute="leadingMargin" id="bzS-En-CVU"/>
+                                    <constraint firstItem="hqN-fi-UdE" firstAttribute="centerX" secondItem="tK1-Ce-2eD" secondAttribute="centerX" id="fA9-qB-alj"/>
+                                    <constraint firstItem="Bzc-lh-ZuY" firstAttribute="trailing" secondItem="hqN-fi-UdE" secondAttribute="trailing" id="fs2-JC-CIA"/>
+                                    <constraint firstItem="Bzc-lh-ZuY" firstAttribute="trailing" secondItem="9lW-ov-UEj" secondAttribute="trailingMargin" id="gLt-ga-BaI"/>
+                                    <constraint firstAttribute="width" secondItem="9lW-ov-UEj" secondAttribute="height" multiplier="207:407" id="gwE-c8-Lhm"/>
+                                    <constraint firstAttribute="bottom" secondItem="tK1-Ce-2eD" secondAttribute="bottom" constant="207" id="iGB-Cr-O7N"/>
+                                    <constraint firstItem="Bzc-lh-ZuY" firstAttribute="top" secondItem="1YI-IM-QOU" secondAttribute="top" constant="53" id="lka-k3-bfV"/>
+                                    <constraint firstItem="hqN-fi-UdE" firstAttribute="top" secondItem="Bzc-lh-ZuY" secondAttribute="bottom" constant="45" id="nXP-Ad-Y6I"/>
+                                    <constraint firstItem="tK1-Ce-2eD" firstAttribute="leading" secondItem="1YI-IM-QOU" secondAttribute="leading" constant="87" id="nlZ-t9-rau"/>
+                                    <constraint firstItem="tK1-Ce-2eD" firstAttribute="top" secondItem="hqN-fi-UdE" secondAttribute="bottom" constant="70" id="q2e-Zu-K0F"/>
+                                    <constraint firstAttribute="height" constant="814" id="tY7-Rd-fO4"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="aJk-tW-YA7"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="1YI-IM-QOU"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9lW-ov-UEj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EZO-0O-Mbu"/>
+                            <constraint firstItem="9lW-ov-UEj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="exN-de-u70"/>
+                            <constraint firstItem="9lW-ov-UEj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="naJ-kT-Nhs"/>
+                            <constraint firstItem="9lW-ov-UEj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="vgm-nH-2K1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageViewProductos" destination="tK1-Ce-2eD" id="WUc-Iy-kWG"/>
+                        <outlet property="pickerViewElementos" destination="hqN-fi-UdE" id="7Tg-5A-Can"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139.13043478260872" y="3.3482142857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
